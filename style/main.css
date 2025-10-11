@@ -1,0 +1,293 @@
+/* ========= Reset & Global ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  background: url('../images/chicken_adobo_image_credits_to_panlasang_pinoy.jpg') center/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  color: #fff;
+}
+
+/* ========= Overlay & Gradient Glow ========= */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(70,0,0,0.6));
+  z-index: 0;
+  animation: fadeOverlay 2s ease-in-out forwards;
+}
+
+@keyframes fadeOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ========= Header ========= */
+header {
+  z-index: 2;
+  margin-top: 10vh;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+
+header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ffcf33, #ff6b6b, #ff914d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  from { filter: drop-shadow(0 0 5px #ffb347); }
+  to { filter: drop-shadow(0 0 15px #ff6b6b); }
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  margin-top: 0.6rem;
+  opacity: 0.9;
+}
+
+/* ========= Dropdown Section ========= */
+main {
+  z-index: 2;
+}
+
+.dropdown-container {
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  width: min(90%, 500px);
+  animation: floatUp 1.5s ease-out forwards;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ========= Dropdown & Button ========= */
+select {
+  width: 70%;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.9);
+  color: #222;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+select:hover {
+  background: #fff;
+  transform: scale(1.03);
+}
+
+button {
+  padding: 0.8rem 1.3rem;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #ff3131, #ff6a00, #ffb347);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(255,100,100,0.3);
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(255,80,80,0.4);
+}
+
+/* ========= Footer ========= */
+footer {
+  z-index: 2;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #f8e6b1;
+  opacity: 0.85;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+footer a {
+  color: #ffe6b3;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ========= Footer Structure ========= */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 10px 40px;
+  font-size: 0.8rem;
+  z-index: 100;
+}
+
+/* LEFT SIDE - Author section */
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.author-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #f57c00;
+  box-shadow: 0 0 8px rgba(255, 183, 77, 0.8);
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+.author-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CENTER SECTION - True Center Alignment */
+.footer-center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  pointer-events: none;
+}
+
+.repo-note {
+  pointer-events: auto;
+  background: rgba(0,0,0,0.25);
+  padding: 4px 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  backdrop-filter: blur(3px);
+  animation: shimmerFade 6s infinite ease-in-out;
+}
+
+.repo-note i {
+  color: #f57c00;
+  margin-right: 5px;
+  animation: shimmer 2.5s infinite;
+}
+
+/* RIGHT SIDE - Social links */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.social-link i {
+  font-size: 1.3rem;
+  color: #fefefe;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.social-link:hover i {
+  transform: scale(1.3) rotate(10deg);
+  color: #ffb347;
+}
+
+.twinkle-text {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.twinkle-text a {
+  color: #ffe066;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.twinkle-text a:hover {
+  color: #fff7b3;
+}
+
+/* ========= Animations ========= */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(255, 183, 77, 0.6); }
+  50% { box-shadow: 0 0 15px rgba(255, 208, 120, 0.9); }
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 1; text-shadow: 0 0 6px #ffb347, 0 0 12px #ffe066; }
+  50% { opacity: 0.7; text-shadow: 0 0 10px #ffd166, 0 0 20px #fff0a5; }
+}
+
+@keyframes shimmerFade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* ========= Mobile Adjustments ========= */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-center {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    width: auto;
+  }
+}
