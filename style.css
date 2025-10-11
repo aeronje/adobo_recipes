@@ -1,73 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* === GLOBAL RESET === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* === BODY & BACKGROUND === */
 body {
   font-family: 'Poppins', sans-serif;
-  background: url('/chicken_adobo_image_credits_to_panlasang_pinoy.jpg') no-repeat center center fixed;
+  background: url('/chicken_adobo_image_credits_to_panlasang_pinoy.jpg')
+              no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   overflow-x: hidden;
   position: relative;
-  backdrop-filter: blur(3px);
+  min-height: 100vh;
 }
 
-.overlay {
+/* Subtle dark overlay to enhance text contrast */
+body::before {
+  content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
   z-index: 0;
 }
 
+/* === HEADER === */
 header {
   text-align: center;
-  padding: 2.5rem 1rem;
+  padding: 3rem 1rem 2rem;
   position: relative;
   z-index: 1;
 }
 
 header h1 {
-  font-size: 2.3rem;
+  font-size: 2.5rem;
   font-weight: 600;
-  text-shadow: 0 0 8px rgba(255,255,255,0.4);
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+  letter-spacing: 1px;
 }
 
 header p {
   font-size: 1.1rem;
-  color: #f0f0f0;
+  color: #e8e8e8;
+  margin-top: 0.5rem;
 }
 
+/* === MAIN CONTENT === */
 main {
-  max-width: 800px;
+  max-width: 850px;
   margin: 2rem auto;
   padding: 0 1rem;
   position: relative;
   z-index: 1;
 }
 
+/* === RECIPE CARD === */
 .recipe {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  padding: 1.5rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
   margin-bottom: 2rem;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .recipe:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
 }
 
 .recipe h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
   background: linear-gradient(90deg, #ffb347, #ffcc33);
   -webkit-background-clip: text;
@@ -77,15 +88,26 @@ main {
 .recipe pre {
   white-space: pre-wrap;
   color: #f8f8f8;
+  line-height: 1.6;
 }
 
+/* === FOOTER === */
 footer {
   text-align: center;
   padding: 2rem 1rem;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
   font-size: 0.9rem;
-  z-index: 1;
   position: relative;
+  z-index: 1;
+  color: #ddd;
 }
 
+footer a {
+  color: #ffcc33;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
