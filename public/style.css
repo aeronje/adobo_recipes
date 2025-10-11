@@ -11,26 +11,29 @@ body {
   color: #fff;
   overflow-x: hidden;
   position: relative;
+  min-height: 100vh;
   background-color: #000; /* fallback */
 }
 
+/* 🔥 Background layer with blur */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url('../images/chicken_adobo_image_credits_to_panlasang_pinoy.jpg') no-repeat center center fixed;
+  background: url('../images/chicken_adobo_image_credits_to_panlasang_pinoy.jpg') no-repeat center center;
   background-size: cover;
-  filter: blur(3px);
-  z-index: -1;
-  opacity: 0.9; /* tweak this if you want a stronger/softer effect */
+  filter: blur(4px) brightness(0.85);
+  transform: scale(1.05);
+  z-index: -2; /* keeps it safely behind everything */
 }
 
-.overlay {
+/* 🔥 Semi-transparent overlay to darken image slightly */
+body::after {
+  content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(5px);
-  z-index: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
 }
 
 header {
