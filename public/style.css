@@ -20,7 +20,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url('./public/chicken_adobo_image_credits_to_panlasang_pinoy.jpg') no-repeat center center;
+  background: url('/chicken_adobo_image_credits_to_panlasang_pinoy.jpg') no-repeat center center;
   background-size: cover;
   filter: blur(4px) brightness(0.85);
   transform: scale(1.05);
