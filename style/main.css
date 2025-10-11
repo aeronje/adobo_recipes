@@ -343,3 +343,28 @@ footer a:hover {
     font-size: 0.65rem;
   }
 }
+
+/* ========= Footer Optimization for Mobile ========= */
+@media (max-width: 768px) {
+  .footer {
+    background: rgba(0, 0, 0, 0.25); /* mas light transparency */
+    padding: 8px 15px;
+  }
+
+  .footer-center {
+    margin-top: 0.4rem;
+  }
+
+  .footer-left {
+    margin-bottom: 0.4rem;
+  }
+
+  button {
+    width: auto; /* para di lumapad */
+    min-width: 80px;
+  }
+
+  .dropdown-container {
+    margin-bottom: 4rem; /* dagdag space para di magdikit sa footer */
+  }
+}
