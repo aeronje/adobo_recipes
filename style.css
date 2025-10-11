@@ -10,7 +10,7 @@
 /* === BODY & BACKGROUND === */
 body {
   font-family: 'Poppins', sans-serif;
-  background: url('/chicken_adobo_image_credits_to_panlasang_pinoy.jpg')
+  background: url('chicken_adobo_image_credits_to_panlasang_pinoy.jpg')
               no-repeat center center fixed;
   background-size: cover;
   color: #fff;
@@ -111,3 +111,4 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
