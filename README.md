@@ -54,8 +54,10 @@ Welcome to the Adobo Multiverse! Before you start dropping your saucy commits, h
 aeronje/
 └── adobo_recipes/
     ├── README.md
-    ├── index.html                     
-    ├── images/                                
+    ├── index.html
+    ├── recipe.html
+    ├── server.js
+    ├── images/
     ├── recipes/
     │   ├── adobo-ng-tadhana.md
     │   ├── adobo-pagpag.md
