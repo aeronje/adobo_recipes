@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cook or check this flavor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+  </head>
+  <body>
+    <div class="overlay"></div>
+
+    <header>
+      <h1>Cook or evaluate this flavor</h1>
+      <p>Git-powered collection of creative adobo variants 🇵🇭</p>
+    </header>
+
+<main>
+  <!-- markdown content will render here -->
+</main>
+
+<div class="bottom-buttons">
+  <button id="goBtn">🛠️Pull Requests section</button>
+  <button id="viewRecipeBtn">🍽️View recipe</button>
+  <button id="goBack"><a href="https://phadoborecipes.vercel.app">🏠Main menu</a></button>
+</div>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <div class="author-photo">
+          <img src="images/aeronje.jpg" alt="aeronje" />
+        </div>
+        <small
+          >Authored and deployed by
+          <strong>
+            <a
+              href="https://www.linkedin.com/in/ron-penones-241728247/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >aeronje</a
+            >
+          </strong>
+        </small>
+      </div>
+
+      <div class="footer-center">
+        <small class="repo-note">
+          <i class="fa-brands fa-github"></i>
+          Please visit
+          <strong>
+            <a
+              href="https://github.com/aeronje/adobo_recipes"
+              target="_blank"
+              rel="noopener noreferrer"
+              >adobo_recipes</a
+            >
+          </strong>
+          or 
+          <strong>
+            <a
+              href="https://github.com/aeronje/adobo_recipes/pulls"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pull Requests</a
+            >
+          </strong> section to share feedback or suggest changes for any variant.
+        </small>
+      </div>
+
+      <div class="footer-right">
+        <a
+          href="https://github.com/aeronje"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+        >
+          <i class="fa-brands fa-github"></i><small> GitHub</small>
+        </a>
+        <a
+          href="https://facebook.com/profile.php?id=61579310017234"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+        >
+          <i class="fa-brands fa-facebook"></i><small> Digital creator</small>
+        </a>
+        <small class="twinkle-text">
+          Image credits:
+          <a href="https://panlasangpinoy.com" target="_blank" rel="noopener noreferrer"
+            >Panlasang Pinoy</a
+          >
+        </small>
+      </div>
+    </footer>
+
+    <!-- 🔥 Modal Dialog -->
+    <div id="recipeModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="recipeContent" class="recipe-article"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

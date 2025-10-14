@@ -18,24 +18,31 @@
     </header>
 
     <main>
-      <div class="dropdown-container">
-        <select id="recipeSelect">
-          <option value="">-- Choose your adobo variant --</option>
-          <option value="adobo-ng-tadhana.md">Adobo ng Tadhana</option>
-          <option value="adobo-pagpag.md">Adobo Pagpag</option>
-          <option value="adobo-sa-baha.md">Adobo sa Baha</option>
-          <option value="adobo-sa-balat-ng-lechon.md">Adobo sa Balat ng Lechon</option>
-          <option value="adobo-sa-gata.md">Adobo sa Gata</option>
-          <option value="adobong-bicolnon.md">Adobong Bicolnon</option>
-          <option value="adobong-itim-classic.md">Adobong Itim (Classic)</option>
-          <option value="adobong-mexicano-jalapeno.md">Adobong Mexicano (Jalapeño)</option>
-          <option value="humba-ng-hague.md">Humba ng Hague</option>
-          <option value="humba-ng-leyte.md">Humba ng Leyte</option>
-          <option value="humba-ng-samar.md">Humba ng Samar</option>
-        </select>
-        <button id="goBtn">Go</button>
-      </div>
-    </main>
+  <div class="dropdown-container">
+    <div class="select-wrapper">
+      <select id="recipeSelect">
+        <option value="">-- Choose your adobo variant --</option>
+        <option value="adobo-ng-tadhana.md">Adobo ng Tadhana</option>
+        <option value="adobo-pagpag.md">Adobo Pagpag <strong>حلال</strong></option>
+        <option value="adobo-sa-baha.md">Adobo sa Baha</option>
+        <option value="adobo-sa-balat-ng-lechon.md">Adobo sa Balat ng Lechon</option>
+        <option value="adobo-sa-gata.md">Adobo sa Gata</option>
+        <option value="adobong-bicolnon.md">Adobong Bicolnon</option>
+        <option value="adobong-itim-classic.md">Adobong Itim (Classic)</option>
+        <option value="adobong-mexicano-jalapeno.md">Adobong Mexicano (Jalapeño) <strong>حلال</strong></option>
+        <option value="humba-ng-hague.md">Humba ng Hague</option>
+        <option value="humba-ng-leyte.md">Humba ng Leyte</option>
+        <option value="humba-ng-samar.md">Humba ng Samar</option>
+      </select>
+      <small class="halal-note">
+    <strong style="color:#00ff7f; font-size:1.8em;">حلال</strong>
+    </small>
+    </div>
+
+    <button id="goBtn">Go</button>
+  </div>
+</main>
+
 
    <footer class="footer">
   <div class="footer-left">
@@ -44,7 +51,7 @@
     </div>
     <small>Authored and deployed by <strong><strong>
       <a href="https://www.linkedin.com/in/ron-penones-241728247/" target="_blank" rel="noopener noreferrer">
-        Ron Penones
+        aeronje
       </a>
 	</strong>
 	</small>

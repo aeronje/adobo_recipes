@@ -6,7 +6,7 @@
 }
 
 html, body {
-  height: 100%;
+  height: 91.5%;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -79,7 +79,6 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   padding: 1.5rem;
   backdrop-filter: blur(10px);
   background: rgba(255,255,255,0.1);
@@ -342,12 +341,9 @@ footer a:hover {
   .twinkle-text {
     font-size: 0.65rem;
   }
-}
 
-/* ========= Footer Optimization for Mobile ========= */
-@media (max-width: 768px) {
   .footer {
-    background: rgba(0, 0, 0, 0.25); /* mas light transparency */
+    background: rgba(0, 0, 0, 0.25);
     padding: 8px 15px;
   }
 
@@ -360,11 +356,130 @@ footer a:hover {
   }
 
   button {
-    width: auto; /* para di lumapad */
+    width: auto;
     min-width: 80px;
   }
 
   .dropdown-container {
-    margin-bottom: 8rem; /* dagdag space para di magdikit sa footer */
+    margin-bottom: 8rem;
   }
+} /* <--- properly closed now */
+
+/* ========= Markdown Render Styling ========= */
+.recipe-article {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #222;
+}
+
+.recipe-article * {
+  font-size: 0.85rem !important;
+  line-height: 1.4 !important;
+}
+
+/* ========= Modal for Markdown ========= */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  margin: 5% auto;
+  padding: 20px 30px;
+  border-radius: 20px;
+  width: min(90%, 700px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  position: relative;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ff6b6b;
+}
+
+.recipe-article {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #222;
+  text-align: left;
+}
+
+.recipe-article h1,
+.recipe-article h2,
+.recipe-article h3 {
+  color: #b32d00;
+  margin-top: 1rem;
+}
+
+.recipe-article p {
+  margin: 0.6rem 0;
+}
+
+.recipe-article ul,
+.recipe-article ol {
+  margin-left: 1.5rem;
+}
+
+.recipe-article img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* ========= Fixed Bottom Buttons ========= */
+.bottom-buttons {
+  position: fixed;
+  bottom: 250px; /* para may gap sa footer */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 150;
+}
+
+.bottom-buttons button {
+  padding: 0.8rem 1.4rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff3131, #ff6a00, #ffb347);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255,100,100,0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.bottom-buttons button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(255,80,80,0.4);
 }
