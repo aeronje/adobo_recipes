@@ -8,14 +8,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/recipe.css" />
   </head>
   <body>
     <div class="overlay"></div>
 
     <header>
-      <h1>Cook or evaluate this flavor</h1>
+      <h1>Cook or check this flavor</h1>
       <p>Git-powered collection of creative adobo variants 🇵🇭</p>
+	  <strong id="recipeTitle" style="position: relative; top: 70px;">recipeTitle</strong>
     </header>
 
 <main>
@@ -23,9 +24,9 @@
 </main>
 
 <div class="bottom-buttons">
-  <button id="goBtn">🛠️Pull Requests section</button>
-  <button id="viewRecipeBtn">🍽️View recipe</button>
-  <button id="goBack"><a href="https://phadoborecipes.vercel.app">🏠Main menu</a></button>
+  <button id="viewRecipeBtn">🍽️<br>View recipe</br></button>
+  <button id="goBtn">🛠️<br>Pull Requests</br></button>
+  <button id="goBack" onclick="window.location.href='index.html'">🏠<br>Main menu</br></button>
 </div>
 
     <footer class="footer">
@@ -104,7 +105,10 @@
       </div>
     </div>
 
+
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="scripts/main.js"></script>
+	<script src="scripts/recipeTitle.js"></script>
   </body>
 </html>
+

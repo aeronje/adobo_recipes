@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
         }
         const target = `recipe.html?recipe=${encodeURIComponent(selected)}`;
-        openNewTab(target);
+        window.location.href = target; //"openNewTab(target);"  - ipalit mo ito kapag gusto mo ibalik sa open new tab imbis na "window.location.href = target;" same tab
       });
     }
 
